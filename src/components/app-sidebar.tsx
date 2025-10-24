@@ -4,13 +4,17 @@ import {
   SidebarFooter,
   SidebarGroup,
   SidebarHeader,
-} from "@/components/ui/sidebar";
-import { SidebarSettings } from "./sidebar-components/sidebar-settings";
+} from '@/components/ui/sidebar'
+import { SidebarProfileComponent } from './sidebar-components/sidebar-profile-component'
+import { SidebarSettings } from './sidebar-components/sidebar-settings'
 
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon" variant="floating">
-      <SidebarHeader></SidebarHeader> 
+      <SidebarHeader>
+        <SidebarProfileComponent />
+      </SidebarHeader>
+       
       <SidebarContent>
         <SidebarGroup />
         <SidebarGroup />
@@ -19,5 +23,5 @@ export function AppSidebar() {
         <SidebarSettings />
       </SidebarFooter>
     </Sidebar>
-  );
+  )
 }
