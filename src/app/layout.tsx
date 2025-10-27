@@ -3,6 +3,7 @@ import './globals.css'
 import { cookies } from 'next/headers'
 import { AppSidebar } from '@/components/app-sidebar'
 import { ThemeProvider } from '@/components/theme-proviter'
+import { Separator } from '@/components/ui/separator'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 
 export const metadata: Metadata = {
@@ -19,15 +20,19 @@ export default async function RootLayout({
   const defaultOpen = cookieStore.get('sidebar_state')?.value === 'true'
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className="transition-all duration-300">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SidebarProvider defaultOpen={defaultOpen}>
             <AppSidebar />
-            <main className="p-2">
-              <SidebarTrigger />
-              {children}
-            </main>
+            <div className="py-4 px-1 flex-1">
+              <div className="flex h-4 gap-2 space-x-1 items-center">
+                <SidebarTrigger />
+                <Separator orientation="vertical" />
+                <p className="text-muted-foreground text-sm">App Layout</p>
+              </div>
+              <div className="p-2">{children}</div>
+            </div>
           </SidebarProvider>
         </ThemeProvider>
       </body>

@@ -1,3 +1,15 @@
+import { EducationHistory } from '@/components/education-history'
+import { PersonalSummary } from '@/components/personal-summary'
+
 export default function Home() {
-  return <main>{/* <div>Hello world!</div> */}</main>
+  return (
+    <main className="px-12 py-6">
+      {
+        <div>
+          <PersonalSummary />
+          <EducationHistory />
+        </div>
+      }
+    </main>
+  )
 }
