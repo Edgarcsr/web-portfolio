@@ -17,7 +17,9 @@ export function SidebarProfileComponent() {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="truncate font-medium">Edgar C S Ribeiro</span>
-            <span className="truncate text-xs">Eng. da computação</span>
+            <span className="truncate text-xs text-gray-400">
+              Eng. da computação
+            </span>
           </div>
         </SidebarMenuButton>
       </SidebarMenuItem>
