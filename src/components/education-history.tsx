@@ -12,7 +12,7 @@ export function EducationHistory() {
       //   endYear: 'até o momento',
     },
     {
-      institution: 'Faculdade Engenheiro Salvador Arena (FESA)',
+      institution: 'Salvador Arena',
       course: 'Baicharelado em programação',
       logo: '/salvador-arena-logo.webp',
       year: 2022,
@@ -41,15 +41,20 @@ export function EducationHistory() {
                 className="aspect-square size-6 rounded-md"
               />
               <p>{education.institution}</p>
-              <span className="text-muted-foreground/70">/</span>
-              <p className="text-muted-foreground">{education.course}</p>
+              <div className="md:flex items-center gap-2 hidden">
+                <span className="text-muted-foreground/70">/</span>
+                <p className="text-muted-foreground">{education.course}</p>
+              </div>
             </div>
             <p className="text-sm">
               {education.year}{' '}
               {education.endYear ? `– ${education.endYear}` : ''}
             </p>
           </div>
-          <Separator orientation="horizontal" />
+          {educationHistory.indexOf(education) !==
+            educationHistory.length - 1 && (
+            <Separator orientation="horizontal" />
+          )}
         </Fragment>
       ))}
     </div>

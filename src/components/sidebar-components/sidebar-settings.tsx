@@ -1,6 +1,6 @@
 'use client'
 
-import { Cog } from 'lucide-react'
+import { Cog, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useState } from 'react'
 import {
@@ -42,7 +42,14 @@ export function SidebarSettings() {
               >
                 <DropdownMenuLabel>Ajustes</DropdownMenuLabel>
                 <DropdownMenuSub>
-                  <DropdownMenuSubTrigger>Tema</DropdownMenuSubTrigger>
+                  <DropdownMenuSubTrigger>
+                    <div className="flex items-center gap-2">
+                      <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                      <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+                      <p>Tema</p>
+                      <span className="sr-only">Trocar tema</span>
+                    </div>
+                  </DropdownMenuSubTrigger>
                   <DropdownMenuPortal>
                     <DropdownMenuSubContent>
                       <DropdownMenuRadioGroup

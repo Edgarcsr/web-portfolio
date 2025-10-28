@@ -1,10 +1,11 @@
+import { LanguagesIcon, MapPin } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip'
 
 export function PersonalSummary() {
   return (
-    <div className="mb-4">
-      <div className="flex gap-2 items-center">
+    <div className="mb-4 flex flex-col gap-4">
+      <div className="flex gap-2 items-center m-auto md:m-0">
         <Avatar>
           <AvatarImage src="/avatar2.webp" alt="@Edgarcsr" />
           <AvatarFallback>EC</AvatarFallback>
@@ -23,6 +24,42 @@ export function PersonalSummary() {
             </TooltipContent>
           </TooltipTrigger>
         </Tooltip>
+      </div>
+      <div className="text-center md:text-left">
+        <h2 className="font-medium text-lg">Apaixonado por mudar o mundo!</h2>
+        <p className="text-muted-foreground text-sm max-w-xl">
+          Estou sempre em busca de novas oportunidades para aprender e crescer.
+          Aprender novas tecnologias e compartilhar conhecimento são minhas
+          maiores paixões.
+        </p>
+      </div>
+      <div className="flex gap-4">
+        <div className="flex gap-2 items-center m-auto md:m-0">
+          <MapPin className="text-muted-foreground" size={14} />
+          <div className="text-xs text-muted-foreground">São Paulo, Brasil</div>
+        </div>
+        <div className="flex gap-2 items-center m-auto md:m-0">
+          <LanguagesIcon className="text-muted-foreground" size={14} />
+          <div className="text-xs text-muted-foreground">
+            <Tooltip>
+              <TooltipTrigger>
+                <span>Português</span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Idioma nativo</p>
+              </TooltipContent>
+            </Tooltip>
+            {', '}
+            <Tooltip>
+              <TooltipTrigger>
+                <span>Inglês</span>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Certificação Cambridge B2</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+        </div>
       </div>
     </div>
   )
