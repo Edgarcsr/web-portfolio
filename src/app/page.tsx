@@ -4,7 +4,7 @@ import { Technologies } from '@/components/technologies'
 
 export default function Home() {
   return (
-    <main className="px-12 py-6">
+    <main className="px-12 py-1">
       {
         <div>
           <PersonalSummary />

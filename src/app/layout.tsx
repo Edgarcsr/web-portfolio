@@ -26,10 +26,10 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SidebarProvider defaultOpen={defaultOpen}>
             <AppSidebar />
-            <div className="py-4 px-1 flex-1">
-              <div className="flex h-4 gap-2 space-x-1 items-center bg-background">
+            <div className="px-1 flex-1">
+              <div className="flex h-4 sticky py-6 px-4 w-full top-0 z-10 gap-2 space-x-1 items-center bg-background/80 backdrop-blur-md rounded-md transition-colors duration-300">
                 <SidebarTrigger />
-                <Separator orientation="vertical" />
+                <Separator orientation="vertical" className="h-4!" />
                 <p className="text-muted-foreground text-sm">Início</p>
               </div>
               <div className="p-2">{children}</div>

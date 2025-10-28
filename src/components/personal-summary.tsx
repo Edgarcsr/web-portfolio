@@ -12,7 +12,7 @@ export function PersonalSummary() {
         </Avatar>
         <Tooltip>
           <TooltipTrigger>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 p-1">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-400 opacity-75"></span>
                 <span className="relative inline-flex size-2 rounded-full bg-purple-500"></span>
