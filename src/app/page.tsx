@@ -1,5 +1,6 @@
 import { EducationHistory } from '@/components/education-history'
 import { PersonalSummary } from '@/components/personal-summary'
+import { Technologies } from '@/components/technologies'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <div>
           <PersonalSummary />
           <EducationHistory />
+          <Technologies />
         </div>
       }
     </main>

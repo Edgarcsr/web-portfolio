@@ -27,7 +27,7 @@ export default async function RootLayout({
           <SidebarProvider defaultOpen={defaultOpen}>
             <AppSidebar />
             <div className="py-4 px-1 flex-1">
-              <div className="flex h-4 gap-2 space-x-1 items-center">
+              <div className="flex h-4 gap-2 space-x-1 items-center bg-background">
                 <SidebarTrigger />
                 <Separator orientation="vertical" />
                 <p className="text-muted-foreground text-sm">Início</p>
