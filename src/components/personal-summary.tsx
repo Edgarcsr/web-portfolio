@@ -44,6 +44,7 @@ export function PersonalSummary() {
             <Tooltip>
               <TooltipTrigger>
                 <span>Português</span>
+                <span className="sr-only">Nativo</span>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Idioma nativo</p>
@@ -53,6 +54,9 @@ export function PersonalSummary() {
             <Tooltip>
               <TooltipTrigger>
                 <span>Inglês</span>
+                <span className="sr-only">
+                  Avançado, Certificação Cambridge B2
+                </span>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Certificação Cambridge B2</p>
